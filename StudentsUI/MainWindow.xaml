@@ -1,0 +1,30 @@
+﻿<Window x:Class="StudentsUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StudentsUI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button Content="фильтровать Предметы" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="26" Width="150" Click="Subject_Click"/>
+        <DataGrid x:Name="myDataGrid" ItemsSource="{Binding MyData}" Margin="0,91,276,91">
+            <DataGrid.Columns>
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBox x:Name="SubjectIdText" HorizontalAlignment="Left" Margin="165,14,0,0" TextWrapping="Wrap" Text="ID" VerticalAlignment="Top" Width="121"/>
+        <Button Content="фильтр Студентов" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Height="26" Width="150" Click="UserId_Click"/>
+        <TextBox x:Name="UserIdText" HorizontalAlignment="Left" Margin="165,45,0,0" TextWrapping="Wrap" Text="ID" VerticalAlignment="Top" Width="121"/>
+        <Button Content="Удалить Запись" HorizontalAlignment="Left" Margin="10,359,0,0" VerticalAlignment="Top" Height="26" Width="111" Click="DeleteStudent_Click"/>
+        <TextBox x:Name="delText" HorizontalAlignment="Left" Margin="126,363,0,0" TextWrapping="Wrap" Text="ID записи" VerticalAlignment="Top" Width="121"/>
+        <Button Content="Обновить таблицу" HorizontalAlignment="Left" Margin="413,354,0,0" VerticalAlignment="Top" Height="26" Width="111" Click="Button_Click"/>
+        <Button Content="Добавить запись" HorizontalAlignment="Left" Margin="529,236,0,0" VerticalAlignment="Top" Height="26" Width="230" Click="PostStudent_Click"/>
+        <TextBox x:Name="nameText" HorizontalAlignment="Left" Margin="529,98,0,0" TextWrapping="Wrap" Text="Имя" VerticalAlignment="Top" Width="230"/>
+        <TextBox x:Name="surnameText" HorizontalAlignment="Left" Margin="529,121,0,0" TextWrapping="Wrap" Text="Фамилия" VerticalAlignment="Top" Width="230"/>
+        <TextBox x:Name="patronymicText" HorizontalAlignment="Left" Margin="529,144,0,0" TextWrapping="Wrap" Text="Отчество" VerticalAlignment="Top" Width="230"/>
+        <TextBox x:Name="dateText" HorizontalAlignment="Left" Margin="529,167,0,0" TextWrapping="Wrap" Text="Дата экзамена" VerticalAlignment="Top" Width="230"/>
+        <TextBox x:Name="subIdText" HorizontalAlignment="Left" Margin="529,190,0,0" TextWrapping="Wrap" Text="ID_предмета" VerticalAlignment="Top" Width="230"/>
+        <TextBox x:Name="gradeText" HorizontalAlignment="Left" Margin="529,213,0,0" TextWrapping="Wrap" Text="Оценка" VerticalAlignment="Top" Width="230"/>
+    </Grid>
+</Window>
